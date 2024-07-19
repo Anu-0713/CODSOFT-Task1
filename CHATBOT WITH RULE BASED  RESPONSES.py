@@ -1,9 +1,6 @@
-#Simple chatbot that answers pre entered inputs
 def simple_chatbot(user_input):
-    # Convert user input to lowercase for easier comparison
     user_input = user_input.lower()
 
-    # Define predefined rules and responses
     greetings = ["hello", "hi", "hey", "howdy"]
     greetings_responses = ["Hello!", "Hi there!", "Hey!", "Howdy!"]
 
@@ -19,15 +16,14 @@ def simple_chatbot(user_input):
     if user_input == "im well":
         return "Good to know! How may I help you today?"
 
-    # Check user input against predefined rules and provide responses
     if user_input in greetings:
         return greetings_responses[greetings.index(user_input)]
     elif user_input in about_bot:
-        return about_bot_responses[0]  # Just return the first response for simplicity
+        return about_bot_responses[0] 
     elif user_input in how_are_you:
-        return how_are_you_responses[0]  # Just return the first response for simplicity
+        return how_are_you_responses[0]  
     elif user_input in weather:
-        return weather_responses[0]  # Just return the first response for simplicity
+        return weather_responses[0] 
     elif user_input == "how are you doing today":
         return "I'm well, what about you?"
     else:
